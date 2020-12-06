@@ -31,9 +31,19 @@ public class Inicio extends javax.swing.JFrame {
         jd_insertar = new javax.swing.JDialog();
         jd_buscar = new javax.swing.JDialog();
         jd_eliminar = new javax.swing.JDialog();
+        jd_crear = new javax.swing.JDialog();
+        jLabel1 = new javax.swing.JLabel();
+        jtxt_codigo = new javax.swing.JTextField();
+        jbtn_crear = new javax.swing.JButton();
+        jbtn_agregar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
+        jm_acciones = new javax.swing.JMenu();
+        jmi_crear = new javax.swing.JMenuItem();
+        jmi_insertar = new javax.swing.JMenuItem();
+        jmi_buscar = new javax.swing.JMenuItem();
+        jmi_borrar = new javax.swing.JMenuItem();
 
         javax.swing.GroupLayout jd_insertarLayout = new javax.swing.GroupLayout(jd_insertar.getContentPane());
         jd_insertar.getContentPane().setLayout(jd_insertarLayout);
@@ -68,6 +78,42 @@ public class Inicio extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        jLabel1.setFont(new java.awt.Font("DengXian", 1, 14)); // NOI18N
+        jLabel1.setText("Codigo");
+
+        jtxt_codigo.setFont(new java.awt.Font("DengXian", 0, 11)); // NOI18N
+
+        jbtn_crear.setText("Crear");
+
+        jbtn_agregar.setText("Agregar");
+
+        javax.swing.GroupLayout jd_crearLayout = new javax.swing.GroupLayout(jd_crear.getContentPane());
+        jd_crear.getContentPane().setLayout(jd_crearLayout);
+        jd_crearLayout.setHorizontalGroup(
+            jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_crearLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jtxt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(jbtn_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(jbtn_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
+        );
+        jd_crearLayout.setVerticalGroup(
+            jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_crearLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jtxt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_agregar)
+                    .addComponent(jbtn_crear))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextArea1.setEditable(false);
@@ -76,6 +122,42 @@ public class Inicio extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jTextArea1.setText("Jason Josué Deras Rodríguez - 11741159\nTiffanny Alexa Varela Banegas - 11811146");
         jScrollPane1.setViewportView(jTextArea1);
+
+        jm_acciones.setText("Acciones");
+
+        jmi_crear.setText("Crear");
+        jmi_crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_crearActionPerformed(evt);
+            }
+        });
+        jm_acciones.add(jmi_crear);
+
+        jmi_insertar.setText("Insertar");
+        jmi_insertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_insertarActionPerformed(evt);
+            }
+        });
+        jm_acciones.add(jmi_insertar);
+
+        jmi_buscar.setText("Buscar");
+        jmi_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_buscarActionPerformed(evt);
+            }
+        });
+        jm_acciones.add(jmi_buscar);
+
+        jmi_borrar.setText("Borrar");
+        jmi_borrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_borrarActionPerformed(evt);
+            }
+        });
+        jm_acciones.add(jmi_borrar);
+
+        jMenuBar1.add(jm_acciones);
 
         setJMenuBar(jMenuBar1);
 
@@ -93,11 +175,43 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(89, 89, 89)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jmi_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_crearActionPerformed
+        // TODO add your handling code here:
+        jd_crear.setModal(true);
+        jd_crear.pack();
+        jd_crear.setLocationRelativeTo(this);
+        jd_crear.setVisible(true);
+    }//GEN-LAST:event_jmi_crearActionPerformed
+
+    private void jmi_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_insertarActionPerformed
+        // TODO add your handling code here:
+        jd_insertar.setModal(true);
+        jd_insertar.pack();
+        jd_insertar.setLocationRelativeTo(this);
+        jd_insertar.setVisible(true);
+    }//GEN-LAST:event_jmi_insertarActionPerformed
+
+    private void jmi_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_buscarActionPerformed
+        // TODO add your handling code here:
+        jd_buscar.setModal(true);
+        jd_buscar.pack();
+        jd_buscar.setLocationRelativeTo(this);
+        jd_buscar.setVisible(true);
+    }//GEN-LAST:event_jmi_buscarActionPerformed
+
+    private void jmi_borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_borrarActionPerformed
+        // TODO add your handling code here:
+        jd_eliminar.setModal(true);
+        jd_eliminar.pack();
+        jd_eliminar.setLocationRelativeTo(this);
+        jd_eliminar.setVisible(true);
+    }//GEN-LAST:event_jmi_borrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,11 +249,21 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton jbtn_agregar;
+    private javax.swing.JButton jbtn_crear;
     private javax.swing.JDialog jd_buscar;
+    private javax.swing.JDialog jd_crear;
     private javax.swing.JDialog jd_eliminar;
     private javax.swing.JDialog jd_insertar;
+    private javax.swing.JMenu jm_acciones;
+    private javax.swing.JMenuItem jmi_borrar;
+    private javax.swing.JMenuItem jmi_buscar;
+    private javax.swing.JMenuItem jmi_crear;
+    private javax.swing.JMenuItem jmi_insertar;
+    private javax.swing.JTextField jtxt_codigo;
     // End of variables declaration//GEN-END:variables
 }
