@@ -77,7 +77,7 @@ public class Inicio extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Delia Melissa Rivera Ramos - 21351013\nJason Josué Deras Rodríguez - 11741159\nTiffanny Alexa Varela Banegas - 11811146");
+        jTextArea1.setText("Jason Josué Deras Rodríguez - 11741159\nTiffanny Alexa Varela Banegas - 11811146");
         jScrollPane1.setViewportView(jTextArea1);
 
         jm_insertar.setText("Insertar");

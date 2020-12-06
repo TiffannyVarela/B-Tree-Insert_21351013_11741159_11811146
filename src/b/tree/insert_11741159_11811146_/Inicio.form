@@ -132,7 +132,7 @@
               <Font name="DialogInput" size="24" style="1"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Delia Melissa Rivera Ramos - 21351013&#xa;Jason Josu&#xe9; Deras Rodr&#xed;guez - 11741159&#xa;Tiffanny Alexa Varela Banegas - 11811146"/>
+            <Property name="text" type="java.lang.String" value="Jason Josu&#xe9; Deras Rodr&#xed;guez - 11741159&#xa;Tiffanny Alexa Varela Banegas - 11811146"/>
           </Properties>
         </Component>
       </SubComponents>
