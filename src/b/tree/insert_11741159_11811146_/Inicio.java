@@ -34,9 +34,6 @@ public class Inicio extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jm_insertar = new javax.swing.JMenu();
-        jm_buscar = new javax.swing.JMenu();
-        jm_eliminar = new javax.swing.JMenu();
 
         javax.swing.GroupLayout jd_insertarLayout = new javax.swing.GroupLayout(jd_insertar.getContentPane());
         jd_insertar.getContentPane().setLayout(jd_insertarLayout);
@@ -80,30 +77,6 @@ public class Inicio extends javax.swing.JFrame {
         jTextArea1.setText("Jason Josué Deras Rodríguez - 11741159\nTiffanny Alexa Varela Banegas - 11811146");
         jScrollPane1.setViewportView(jTextArea1);
 
-        jm_insertar.setText("Insertar");
-        jm_insertar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jm_insertarActionPerformed(evt);
-            }
-        });
-        jMenuBar1.add(jm_insertar);
-
-        jm_buscar.setText("Buscar");
-        jm_buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jm_buscarActionPerformed(evt);
-            }
-        });
-        jMenuBar1.add(jm_buscar);
-
-        jm_eliminar.setText("Eliminar");
-        jm_eliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jm_eliminarActionPerformed(evt);
-            }
-        });
-        jMenuBar1.add(jm_eliminar);
-
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -120,35 +93,11 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(89, 89, 89)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jm_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_insertarActionPerformed
-        // TODO add your handling code here:
-        jd_insertar.setModal(true);
-        jd_insertar.pack();
-        jd_insertar.setLocationRelativeTo(this);
-        jd_insertar.setVisible(true);
-    }//GEN-LAST:event_jm_insertarActionPerformed
-
-    private void jm_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_buscarActionPerformed
-        // TODO add your handling code here:
-        jd_buscar.setModal(true);
-        jd_buscar.pack();
-        jd_buscar.setLocationRelativeTo(this);
-        jd_buscar.setVisible(true);
-    }//GEN-LAST:event_jm_buscarActionPerformed
-
-    private void jm_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_eliminarActionPerformed
-        // TODO add your handling code here:
-        jd_eliminar.setModal(true);
-        jd_eliminar.pack();
-        jd_eliminar.setLocationRelativeTo(this);
-        jd_eliminar.setVisible(true);
-    }//GEN-LAST:event_jm_eliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,8 +141,5 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JDialog jd_buscar;
     private javax.swing.JDialog jd_eliminar;
     private javax.swing.JDialog jd_insertar;
-    private javax.swing.JMenu jm_buscar;
-    private javax.swing.JMenu jm_eliminar;
-    private javax.swing.JMenu jm_insertar;
     // End of variables declaration//GEN-END:variables
 }
