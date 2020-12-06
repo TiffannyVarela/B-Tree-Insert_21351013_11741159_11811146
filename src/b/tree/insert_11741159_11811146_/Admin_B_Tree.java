@@ -2,7 +2,7 @@ package b.tree.insert_11741159_11811146_;
 
 public class Admin_B_Tree {
     
-    private  int orden = 5;
+    public static int orden = 5;
     private int min = orden-1/2;
     private int max = orden-1;
     private  boolean esRaiz;
