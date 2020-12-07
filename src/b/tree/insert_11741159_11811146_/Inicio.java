@@ -6,6 +6,7 @@
 package b.tree.insert_11741159_11811146_;
 
 import java.io.File;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -110,10 +111,10 @@ public class Inicio extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtxt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
-                .addComponent(jbtn_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
                 .addComponent(jbtn_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(jbtn_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43))
         );
         jd_crearLayout.setVerticalGroup(
             jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,12 +231,22 @@ public class Inicio extends javax.swing.JFrame {
     private void jbtn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_agregarActionPerformed
         // TODO add your handling code here:
         int cod = Integer.parseInt(jtxt_codigo.getText());
+        entero = new Entero(cod);
+        enteros.add(entero);
+        jtxt_codigo.setText("");
         
     }//GEN-LAST:event_jbtn_agregarActionPerformed
 
     private void jbtn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_crearActionPerformed
         // TODO add your handling code here:
-        admin = new Admin_Entero(nombreArch+".rw");
+        try {
+            admin = new Admin_Entero(nombreArch+".rw");
+            admin.setCampos(enteros);
+            admin.Escribir();
+            enteros.clear();
+            jd_crear.setVisible(false);
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jbtn_crearActionPerformed
 
     /**
@@ -292,6 +303,8 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jtxt_codigo;
     // End of variables declaration//GEN-END:variables
 String nombreArch = "";
-Admin_Nodo admin;
+Admin_Entero admin;
 String ruta = "./Creados/";
+Entero entero;
+ArrayList <Entero> enteros = new ArrayList();
 }
