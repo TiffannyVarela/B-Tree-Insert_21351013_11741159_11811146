@@ -7,6 +7,7 @@ package b.tree.insert_11741159_11811146_;
 
 import java.io.File;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -33,6 +34,13 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jd_insertar = new javax.swing.JDialog();
+        jLabel2 = new javax.swing.JLabel();
+        jcmb_existe = new javax.swing.JComboBox<>();
+        jbtn_cargar = new javax.swing.JButton();
+        jbtn_abrir = new javax.swing.JButton();
+        jbtn_insertar = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jtxt_codigo_insert = new javax.swing.JTextField();
         jd_buscar = new javax.swing.JDialog();
         jd_eliminar = new javax.swing.JDialog();
         jd_crear = new javax.swing.JDialog();
@@ -49,15 +57,71 @@ public class Inicio extends javax.swing.JFrame {
         jmi_buscar = new javax.swing.JMenuItem();
         jmi_borrar = new javax.swing.JMenuItem();
 
+        jLabel2.setFont(new java.awt.Font("DengXian", 1, 14)); // NOI18N
+        jLabel2.setText("Existen");
+
+        jcmb_existe.setFont(new java.awt.Font("DengXian", 0, 14)); // NOI18N
+        jcmb_existe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
+
+        jbtn_cargar.setText("Cargar");
+        jbtn_cargar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_cargarActionPerformed(evt);
+            }
+        });
+
+        jbtn_abrir.setText("Abrir");
+        jbtn_abrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_abrirActionPerformed(evt);
+            }
+        });
+
+        jbtn_insertar.setText("Insertar");
+
+        jLabel3.setFont(new java.awt.Font("DengXian", 1, 14)); // NOI18N
+        jLabel3.setText("Codigo");
+
+        jtxt_codigo_insert.setFont(new java.awt.Font("DengXian", 0, 14)); // NOI18N
+
         javax.swing.GroupLayout jd_insertarLayout = new javax.swing.GroupLayout(jd_insertar.getContentPane());
         jd_insertar.getContentPane().setLayout(jd_insertarLayout);
         jd_insertarLayout.setHorizontalGroup(
             jd_insertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jd_insertarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_insertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jd_insertarLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jtxt_codigo_insert))
+                    .addGroup(jd_insertarLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jcmb_existe, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(44, 44, 44)
+                .addGroup(jd_insertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbtn_cargar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtn_insertar, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jbtn_abrir, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         jd_insertarLayout.setVerticalGroup(
             jd_insertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jd_insertarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_insertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jcmb_existe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_cargar)
+                    .addComponent(jbtn_abrir))
+                .addGap(30, 30, 30)
+                .addGroup(jd_insertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jtxt_codigo_insert, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtn_insertar))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jd_buscarLayout = new javax.swing.GroupLayout(jd_buscar.getContentPane());
@@ -249,6 +313,39 @@ public class Inicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jbtn_crearActionPerformed
 
+    private void jbtn_cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargarActionPerformed
+        // TODO add your handling code here:
+        try {
+            jcmb_existe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
+            File carpeta = new File (ruta);
+            ArrayList <String> docs = new ArrayList<String>();
+            for (File archivo : carpeta.listFiles()) {
+                if (archivo.isFile() && (archivo.getName().contains(".rw"))) {
+                    docs.add(archivo.getName());
+                }
+            }
+            if (docs.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "No hay ningun archivo", "Carpeta Vacia", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else{
+                DefaultComboBoxModel modelo = (DefaultComboBoxModel) jcmb_existe.getModel();
+                for (int i = 0; i < docs.size(); i++) {
+                    modelo.addElement(docs.get(i));
+                    jcmb_existe.setModel(modelo);
+                }
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jbtn_cargarActionPerformed
+
+    private void jbtn_abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_abrirActionPerformed
+        // TODO add your handling code here:
+        nombreArch = jcmb_existe.getSelectedItem().toString();
+        admin = new Admin_Entero(nombreArch);
+        admin.Cargar();
+        
+    }//GEN-LAST:event_jbtn_abrirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -286,11 +383,17 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton jbtn_abrir;
     private javax.swing.JButton jbtn_agregar;
+    private javax.swing.JButton jbtn_cargar;
     private javax.swing.JButton jbtn_crear;
+    private javax.swing.JButton jbtn_insertar;
+    private javax.swing.JComboBox<String> jcmb_existe;
     private javax.swing.JDialog jd_buscar;
     private javax.swing.JDialog jd_crear;
     private javax.swing.JDialog jd_eliminar;
@@ -301,6 +404,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_crear;
     private javax.swing.JMenuItem jmi_insertar;
     private javax.swing.JTextField jtxt_codigo;
+    private javax.swing.JTextField jtxt_codigo_insert;
     // End of variables declaration//GEN-END:variables
 String nombreArch = "";
 Admin_Entero admin;
