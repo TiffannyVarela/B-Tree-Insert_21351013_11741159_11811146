@@ -217,6 +217,7 @@ public class Admin_B_Tree {
 
     public void eliminar(int valor) { //elimina de la lista el valor y vuelve a crear el arbol
         
+        Nodo padre =root;
         boolean encontrado = false;
         int j = 0;
         for (int i = 0; i < ingresados.size() && !encontrado; i++) {
@@ -233,11 +234,10 @@ public class Admin_B_Tree {
         }
         ArrayList<Integer> auxiliar = ingresados;
         ingresados = new ArrayList<Integer>();
-        root = new Nodo();
+        root =new Nodo();
         root.tengoHijos = false;
         for (int k = 0; k < auxiliar.size(); k++) {
-            Integer y = auxiliar.get(k);
-            int o = y.intValue();
+            int o = auxiliar.get(k);
             insertar(o);
         }
     }

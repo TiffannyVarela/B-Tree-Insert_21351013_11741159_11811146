@@ -141,11 +141,8 @@
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                          <Component id="jtxt_codigo_insert_Nodo" max="32767" attributes="0"/>
-                                      </Group>
                                       <Component id="jtxt_codigo_insert_Buscar" max="32767" attributes="0"/>
+                                      <Component id="jtxt_codigo_insert_Nodo" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
