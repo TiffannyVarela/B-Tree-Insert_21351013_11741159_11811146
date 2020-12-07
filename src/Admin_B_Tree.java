@@ -29,6 +29,7 @@ public class Admin_B_Tree {
     }
 
     public void insertar(int valor) {
+        
         if (root.tengoHijos == false) {
             int j = 0;
             for (int i = 0; i < root.valores.length; i++) {
@@ -260,7 +261,7 @@ public class Admin_B_Tree {
         
         for (int i = 0; i < n2.Valores().length; i++) {
             if(n2.Valores()[i]==valor){
-                System.out.println("Nodo de ubicacion: "+n2);
+                System.out.println("Nodo de ubicacion: "+n2.getValor());
                 esta =true;
             }
         }
@@ -278,18 +279,6 @@ public class Admin_B_Tree {
         return cont;
     }
     
-    public boolean buscarEnNodo(int valor, Nodo n){
-        
-        boolean ret = false;
-        for (int i = 0; i < n.valores.length; i++) {
-            if(n.valores[i]==valor){
-                ret = true;
-                break;
-            }
-        }
-        return ret;
-    }
-
     public String recorrer(Nodo nodo) {
         
         arbol += "\n";
