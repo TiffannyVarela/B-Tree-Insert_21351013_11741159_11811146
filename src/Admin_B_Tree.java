@@ -255,7 +255,6 @@ public class Admin_B_Tree {
             if (ingresados.get(i) == valor) {
                 esta = true;
                 System.out.println("El elemento buscado si se encuentra en el arbol B");
-                return esta;
             }
         }
         
