@@ -53,7 +53,7 @@ public class Inicio extends javax.swing.JFrame {
         jbtn_cargarVer = new javax.swing.JButton();
         jbtn_abrirVer = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
+        jtree_verArbol = new javax.swing.JTree();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -219,7 +219,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane2.setViewportView(jTree1);
+        jScrollPane2.setViewportView(jtree_verArbol);
 
         javax.swing.GroupLayout jd_verArbolLayout = new javax.swing.GroupLayout(jd_verArbol.getContentPane());
         jd_verArbol.getContentPane().setLayout(jd_verArbolLayout);
@@ -477,7 +477,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTree jTree1;
     private javax.swing.JButton jbtn_abrir;
     private javax.swing.JButton jbtn_abrirVer;
     private javax.swing.JButton jbtn_agregar;
@@ -498,6 +497,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_crear;
     private javax.swing.JMenuItem jmi_insertar;
     private javax.swing.JMenuItem jmi_verArbol;
+    private javax.swing.JTree jtree_verArbol;
     private javax.swing.JTextField jtxt_codigo;
     private javax.swing.JTextField jtxt_codigo_insert;
     // End of variables declaration//GEN-END:variables
