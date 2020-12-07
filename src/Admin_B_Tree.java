@@ -1,4 +1,3 @@
-package b.tree.insert_11741159_11811146_;
 
 import java.util.ArrayList;
 
@@ -17,28 +16,7 @@ public class Admin_B_Tree {
         root = new Nodo();
         esRaiz = true;
     }
-     public void insertar(int valor) {
-        
-        if (root.tengoHijos == false) {
-            int j = 0;
-            for (int i = 0; i < root.valores.length; i++) {
-                if (root.valores[i] == 0) {
-                    root.valores[i] = valor;
-                    ingresados.add(valor);
-                    
-                    j = i;
-                    //ordenar(root.valores, 6);
-                    break;
-                }
-            }
-            if (j == 2 * orden) {
-            }
-        } else {
-            setTengoHijos(root);
-            ingresarEnHijos(root, valor);
-
-        }
-    }
+     
     public void setTengoHijos(Nodo nodo) {
         
         if (nodo == root) {
