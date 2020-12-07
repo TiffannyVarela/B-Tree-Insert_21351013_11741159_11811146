@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Admin_B_Tree {
     
     public static int orden = 5;
-    private int min = orden-1/2;
+    private int min = (orden-1)/2;
     private int max = orden-1;
     private  boolean esRaiz;
     private ArrayList<Integer> ingresados=new ArrayList();
@@ -23,7 +23,6 @@ public class Admin_B_Tree {
     
 
     public Admin_B_Tree(String valor) {
-        this.orden = orden / 2;
         root = new Nodo();
         root.SetValor(valor);
         esRaiz = true;
@@ -88,7 +87,6 @@ public class Admin_B_Tree {
     }
 
     public void ingresarEnHijos(Nodo conHijos, int valor) {
-        //int valor = reg.getId();
         boolean entro = false;
         if (conHijos != null && !conHijos.tengoHijos) {
             ubicarValorEnArreglo(conHijos, valor);
@@ -104,7 +102,6 @@ public class Admin_B_Tree {
     }
 
     public void ubicarValorEnArreglo(Nodo nodoA, int valor) {
-        //int valor = reg.getId();
         int cont = 0;
         while (cont <= 2 * orden) {
             if (nodoA.valores[cont] == 0) {
@@ -248,7 +245,7 @@ public class Admin_B_Tree {
     public boolean buscar(int valor, String  n) {
 
         String padre=n;
-        Nodo n2 = null;
+        Nodo n2 = root;
         n2.SetValor(padre);
         
         boolean esta = false;
@@ -258,6 +255,13 @@ public class Admin_B_Tree {
                 esta = true;
                 System.out.println("El elemento buscado si se encuentra en el arbol B");
                 return esta;
+            }
+        }
+        
+        for (int i = 0; i < n2.Valores().length; i++) {
+            if(n2.Valores()[i]==valor){
+                System.out.println("Nodo de ubicacion: "+n2);
+                esta =true;
             }
         }
         
@@ -273,7 +277,9 @@ public class Admin_B_Tree {
         }
         return cont;
     }
+    
     public boolean buscarEnNodo(int valor, Nodo n){
+        
         boolean ret = false;
         for (int i = 0; i < n.valores.length; i++) {
             if(n.valores[i]==valor){
@@ -285,6 +291,7 @@ public class Admin_B_Tree {
     }
 
     public String recorrer(Nodo nodo) {
+        
         arbol += "\n";
         for (int i = 0; i < 2 * orden + 1; i++) {
             if (nodo.nodo[i] != null) {
