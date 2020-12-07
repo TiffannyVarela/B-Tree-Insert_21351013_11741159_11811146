@@ -10,14 +10,17 @@ public class Nodo{
     String valor;
     
     public Nodo(){
-       nodo = new Nodo [Admin_B_Tree.orden * 2 + 3];
-       valores = new int [Admin_B_Tree.orden * 2 + 1];
+       nodo = new Nodo [Admin_B_Tree.orden];
+       valores = new int [Admin_B_Tree.orden];
     }
     
     public String getValor(){
         return valor;
     }
     
+    public int []Valores(){
+        return valores;
+    }
     public void SetValor(String valor){
         this.valor=valor;
     }
