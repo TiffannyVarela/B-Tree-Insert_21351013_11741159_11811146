@@ -64,13 +64,6 @@ public class Inicio extends javax.swing.JFrame {
         jtxt_codigo = new javax.swing.JTextField();
         jbtn_crear = new javax.swing.JButton();
         jbtn_agregar = new javax.swing.JButton();
-        jd_verArbol = new javax.swing.JDialog();
-        jLabel4 = new javax.swing.JLabel();
-        jcmb_existeVer = new javax.swing.JComboBox<>();
-        jbtn_cargarVer = new javax.swing.JButton();
-        jbtn_abrirVer = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jtree_verArbol = new javax.swing.JTree();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -79,7 +72,6 @@ public class Inicio extends javax.swing.JFrame {
         jmi_insertar = new javax.swing.JMenuItem();
         jmi_buscar = new javax.swing.JMenuItem();
         jmi_borrar = new javax.swing.JMenuItem();
-        jmi_verArbol = new javax.swing.JMenuItem();
 
         jLabel2.setFont(new java.awt.Font("DengXian", 1, 14)); // NOI18N
         jLabel2.setText("Existen");
@@ -361,62 +353,6 @@ public class Inicio extends javax.swing.JFrame {
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        jLabel4.setFont(new java.awt.Font("DengXian", 1, 14)); // NOI18N
-        jLabel4.setText("Existen");
-
-        jcmb_existeVer.setFont(new java.awt.Font("DengXian", 0, 14)); // NOI18N
-        jcmb_existeVer.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
-
-        jbtn_cargarVer.setText("Cargar");
-        jbtn_cargarVer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtn_cargarVerActionPerformed(evt);
-            }
-        });
-
-        jbtn_abrirVer.setText("Abrir");
-        jbtn_abrirVer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtn_abrirVerActionPerformed(evt);
-            }
-        });
-
-        jScrollPane2.setViewportView(jtree_verArbol);
-
-        javax.swing.GroupLayout jd_verArbolLayout = new javax.swing.GroupLayout(jd_verArbol.getContentPane());
-        jd_verArbol.getContentPane().setLayout(jd_verArbolLayout);
-        jd_verArbolLayout.setHorizontalGroup(
-            jd_verArbolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verArbolLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jd_verArbolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_verArbolLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
-                        .addContainerGap())
-                    .addGroup(jd_verArbolLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jcmb_existeVer, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(jbtn_cargarVer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbtn_abrirVer, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27))))
-        );
-        jd_verArbolLayout.setVerticalGroup(
-            jd_verArbolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verArbolLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jd_verArbolLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jcmb_existeVer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbtn_cargarVer)
-                    .addComponent(jbtn_abrirVer))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextArea1.setEditable(false);
@@ -459,14 +395,6 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         jm_acciones.add(jmi_borrar);
-
-        jmi_verArbol.setText("Ver Arbol");
-        jmi_verArbol.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmi_verArbolActionPerformed(evt);
-            }
-        });
-        jm_acciones.add(jmi_verArbol);
 
         jMenuBar1.add(jm_acciones);
 
@@ -589,46 +517,6 @@ public class Inicio extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jbtn_abrirActionPerformed
 
-    private void jmi_verArbolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_verArbolActionPerformed
-        // TODO add your handling code here:
-        jd_verArbol.setModal(true);
-        jd_verArbol.pack();
-        jd_verArbol.setLocationRelativeTo(this);
-        jd_verArbol.setVisible(true);
-    }//GEN-LAST:event_jmi_verArbolActionPerformed
-
-    private void jbtn_cargarVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargarVerActionPerformed
-        // TODO add your handling code here:
-        try {
-            jcmb_existeVer.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
-            File carpeta = new File (ruta);
-            ArrayList <String> docs = new ArrayList<String>();
-            for (File archivo : carpeta.listFiles()) {
-                if (archivo.isFile() && (archivo.getName().contains(".rw"))) {
-                    docs.add(archivo.getName());
-                }
-            }
-            if (docs.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "No hay ningun archivo", "Carpeta Vacia", JOptionPane.INFORMATION_MESSAGE);
-            }
-            else{
-                DefaultComboBoxModel modelo = (DefaultComboBoxModel) jcmb_existeVer.getModel();
-                for (int i = 0; i < docs.size(); i++) {
-                    modelo.addElement(docs.get(i));
-                    jcmb_existeVer.setModel(modelo);
-                }
-            }
-        } catch (Exception e) {
-        }
-    }//GEN-LAST:event_jbtn_cargarVerActionPerformed
-
-    private void jbtn_abrirVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_abrirVerActionPerformed
-        // TODO add your handling code here:
-        nombreArch = jcmb_existe.getSelectedItem().toString();
-        admin = new Admin_Entero(nombreArch);
-        admin.Cargar();
-    }//GEN-LAST:event_jbtn_abrirVerActionPerformed
-
     private void jbtn_cargar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargar_BuscarActionPerformed
         // TODO add your handling code here:
         try {
@@ -706,16 +594,22 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jbtn_insertar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertar_BuscarActionPerformed
         // TODO add your handling code here:
-        admin_b.buscar(Integer.parseInt(jtxt_codigo_insert_Buscar.getText()), jtxt_codigo_insert_Nodo.getText());
+        try {
+            admin_b.buscar(Integer.parseInt(jtxt_codigo_insert_Buscar.getText()), jtxt_codigo_insert_Nodo.getText());
         jtxt_codigo_insert_Buscar.setText("");
         jtxt_codigo_insert_Nodo.setText("");
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jbtn_insertar_BuscarActionPerformed
 
     private void jbtn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_eliminarActionPerformed
         // TODO add your handling code here:
-        admin_b.eliminar(Integer.parseInt(jtxt_codigo_insert_Eliminar.getText()));
+        try {
+            admin_b.eliminar(Integer.parseInt(jtxt_codigo_insert_Eliminar.getText()));
         jtxt_codigo_insert_Eliminar.setText("");
         JOptionPane.showMessageDialog(this, "Se borro el elemento del arbol");
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jbtn_eliminarActionPerformed
 
     /**
@@ -757,7 +651,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -765,15 +658,12 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton jbtn_abrir;
-    private javax.swing.JButton jbtn_abrirVer;
     private javax.swing.JButton jbtn_abrir_Buscar;
     private javax.swing.JButton jbtn_abrir_Eliminar;
     private javax.swing.JButton jbtn_agregar;
     private javax.swing.JButton jbtn_cargar;
-    private javax.swing.JButton jbtn_cargarVer;
     private javax.swing.JButton jbtn_cargar_Buscar;
     private javax.swing.JButton jbtn_cargar_Eliminar;
     private javax.swing.JButton jbtn_crear;
@@ -781,21 +671,17 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton jbtn_insertar;
     private javax.swing.JButton jbtn_insertar_Buscar;
     private javax.swing.JComboBox<String> jcmb_existe;
-    private javax.swing.JComboBox<String> jcmb_existeVer;
     private javax.swing.JComboBox<String> jcmb_existe_Buscar;
     private javax.swing.JComboBox<String> jcmb_existe_Eliminar;
     private javax.swing.JDialog jd_buscar;
     private javax.swing.JDialog jd_crear;
     private javax.swing.JDialog jd_eliminar;
     private javax.swing.JDialog jd_insertar;
-    private javax.swing.JDialog jd_verArbol;
     private javax.swing.JMenu jm_acciones;
     private javax.swing.JMenuItem jmi_borrar;
     private javax.swing.JMenuItem jmi_buscar;
     private javax.swing.JMenuItem jmi_crear;
     private javax.swing.JMenuItem jmi_insertar;
-    private javax.swing.JMenuItem jmi_verArbol;
-    private javax.swing.JTree jtree_verArbol;
     private javax.swing.JTextField jtxt_codigo;
     private javax.swing.JTextField jtxt_codigo_insert;
     private javax.swing.JTextField jtxt_codigo_insert_Buscar;
