@@ -1,4 +1,3 @@
-package b.tree.insert_11741159_11811146_;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
