@@ -13,6 +13,15 @@ public class Admin_B_Tree {
     public static String arbol = "";
     Nodo root;
 
+    public Admin_B_Tree() {
+        this.orden = orden / 2;
+        root = new Nodo();
+
+        esRaiz = true;
+    }
+    
+    
+
     public Admin_B_Tree(String valor) {
         this.orden = orden / 2;
         root = new Nodo();

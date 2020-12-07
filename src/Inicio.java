@@ -584,7 +584,7 @@ public class Inicio extends javax.swing.JFrame {
     private void jbtn_cargarVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargarVerActionPerformed
         // TODO add your handling code here:
         try {
-            jcmb_existe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
+            jcmb_existeVer.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
             File carpeta = new File (ruta);
             ArrayList <String> docs = new ArrayList<String>();
             for (File archivo : carpeta.listFiles()) {
@@ -596,10 +596,10 @@ public class Inicio extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "No hay ningun archivo", "Carpeta Vacia", JOptionPane.INFORMATION_MESSAGE);
             }
             else{
-                DefaultComboBoxModel modelo = (DefaultComboBoxModel) jcmb_existe.getModel();
+                DefaultComboBoxModel modelo = (DefaultComboBoxModel) jcmb_existeVer.getModel();
                 for (int i = 0; i < docs.size(); i++) {
                     modelo.addElement(docs.get(i));
-                    jcmb_existe.setModel(modelo);
+                    jcmb_existeVer.setModel(modelo);
                 }
             }
         } catch (Exception e) {
@@ -613,14 +613,14 @@ public class Inicio extends javax.swing.JFrame {
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrirVerActionPerformed
 
-<<<<<<< HEAD
 //<<<<<<< HEAD
-=======
->>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
+//<<<<<<< HEAD
+//=======
+//>>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
     private void jbtn_cargar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargar_BuscarActionPerformed
         // TODO add your handling code here:
         try {
-            jcmb_existe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
+            jcmb_existe_Buscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
             File carpeta = new File (ruta);
             ArrayList <String> docs = new ArrayList<String>();
             for (File archivo : carpeta.listFiles()) {
@@ -632,10 +632,10 @@ public class Inicio extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "No hay ningun archivo", "Carpeta Vacia", JOptionPane.INFORMATION_MESSAGE);
             }
             else{
-                DefaultComboBoxModel modelo = (DefaultComboBoxModel) jcmb_existe.getModel();
+                DefaultComboBoxModel modelo = (DefaultComboBoxModel) jcmb_existe_Buscar.getModel();
                 for (int i = 0; i < docs.size(); i++) {
                     modelo.addElement(docs.get(i));
-                    jcmb_existe.setModel(modelo);
+                    jcmb_existe_Buscar.setModel(modelo);
                 }
             }
         } catch (Exception e) {
@@ -652,7 +652,7 @@ public class Inicio extends javax.swing.JFrame {
     private void jbtn_cargar_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargar_EliminarActionPerformed
         // TODO add your handling code here:
         try {
-            jcmb_existe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
+            jcmb_existe_Eliminar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
             File carpeta = new File (ruta);
             ArrayList <String> docs = new ArrayList<String>();
             for (File archivo : carpeta.listFiles()) {
@@ -664,10 +664,10 @@ public class Inicio extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "No hay ningun archivo", "Carpeta Vacia", JOptionPane.INFORMATION_MESSAGE);
             }
             else{
-                DefaultComboBoxModel modelo = (DefaultComboBoxModel) jcmb_existe.getModel();
+                DefaultComboBoxModel modelo = (DefaultComboBoxModel) jcmb_existe_Eliminar.getModel();
                 for (int i = 0; i < docs.size(); i++) {
                     modelo.addElement(docs.get(i));
-                    jcmb_existe.setModel(modelo);
+                    jcmb_existe_Eliminar.setModel(modelo);
                 }
             }
         } catch (Exception e) {
@@ -680,10 +680,10 @@ public class Inicio extends javax.swing.JFrame {
         admin = new Admin_Entero(nombreArch);
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrir_EliminarActionPerformed
-<<<<<<< HEAD
+// HEAD
 //=======
-=======
->>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
+//=======
+//>>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
     private void jbtn_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertarActionPerformed
         // TODO add your handling code here:
         int codigo=0;
@@ -694,9 +694,9 @@ public class Inicio extends javax.swing.JFrame {
         admin_b.insertar(codigo);
         
     }//GEN-LAST:event_jbtn_insertarActionPerformed
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //>>>>>>> 9ac080fcf21873b752205cdee438308d80b6e170
-=======
+//=======
 
     private void jbtn_insertar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertar_BuscarActionPerformed
         // TODO add your handling code here:
@@ -708,7 +708,7 @@ public class Inicio extends javax.swing.JFrame {
         jtxt_codigo_insert_Eliminar.setText("");
         JOptionPane.showMessageDialog(this, "Se borro el elemento del arbol");
     }//GEN-LAST:event_jbtn_eliminarActionPerformed
->>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
+//>>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
 
     /**
      * @param args the command line arguments
