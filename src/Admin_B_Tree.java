@@ -38,6 +38,7 @@ public class Admin_B_Tree {
 
         }
     }
+     
     public void setTengoHijos(Nodo nodo) {
         
         if (nodo == root) {
@@ -70,6 +71,7 @@ public class Admin_B_Tree {
             }
         }
     }
+    
     /*public boolean hoja (Nodo x){
         boolean resp = false;
         if (x.getHijos().length==0) {
