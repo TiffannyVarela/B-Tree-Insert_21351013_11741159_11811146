@@ -613,14 +613,6 @@ public class Inicio extends javax.swing.JFrame {
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrirVerActionPerformed
 
-<<<<<<< HEAD
-//<<<<<<< HEAD
-//<<<<<<< HEAD
-//=======
-//>>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
-=======
-
->>>>>>> 79cf16f457e4a42e6f0163ce1d983762174a1a1c
     private void jbtn_cargar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargar_BuscarActionPerformed
         // TODO add your handling code here:
         try {
@@ -684,14 +676,7 @@ public class Inicio extends javax.swing.JFrame {
         admin = new Admin_Entero(nombreArch);
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrir_EliminarActionPerformed
-<<<<<<< HEAD
-// HEAD
-//=======
-//=======
-//>>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
-=======
 
->>>>>>> 79cf16f457e4a42e6f0163ce1d983762174a1a1c
     private void jbtn_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertarActionPerformed
         // TODO add your handling code here:
         int codigo=0;
@@ -702,13 +687,7 @@ public class Inicio extends javax.swing.JFrame {
         admin_b.insertar(codigo);
         
     }//GEN-LAST:event_jbtn_insertarActionPerformed
-<<<<<<< HEAD
-//<<<<<<< HEAD
-//>>>>>>> 9ac080fcf21873b752205cdee438308d80b6e170
-//=======
-=======
 
->>>>>>> 79cf16f457e4a42e6f0163ce1d983762174a1a1c
 
     private void jbtn_insertar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertar_BuscarActionPerformed
         // TODO add your handling code here:
@@ -720,10 +699,7 @@ public class Inicio extends javax.swing.JFrame {
         jtxt_codigo_insert_Eliminar.setText("");
         JOptionPane.showMessageDialog(this, "Se borro el elemento del arbol");
     }//GEN-LAST:event_jbtn_eliminarActionPerformed
-<<<<<<< HEAD
-//>>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
-=======
->>>>>>> 79cf16f457e4a42e6f0163ce1d983762174a1a1c
+
 
     /**
      * @param args the command line arguments
