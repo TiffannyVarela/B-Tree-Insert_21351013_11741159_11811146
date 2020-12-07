@@ -49,6 +49,8 @@ public class Inicio extends javax.swing.JFrame {
         jtxt_codigo_insert_Buscar = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jtxt_ruta = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jtxt_codigo_insert_Nodo = new javax.swing.JTextField();
         jd_eliminar = new javax.swing.JDialog();
         jLabel7 = new javax.swing.JLabel();
         jcmb_existe_Eliminar = new javax.swing.JComboBox<>();
@@ -183,6 +185,11 @@ public class Inicio extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("DengXian", 1, 14)); // NOI18N
         jLabel6.setText("Codigo");
 
+        jLabel9.setFont(new java.awt.Font("DengXian", 1, 14)); // NOI18N
+        jLabel9.setText("Nodo");
+
+        jtxt_codigo_insert_Nodo.setFont(new java.awt.Font("DengXian", 0, 14)); // NOI18N
+
         javax.swing.GroupLayout jd_buscarLayout = new javax.swing.GroupLayout(jd_buscar.getContentPane());
         jd_buscar.getContentPane().setLayout(jd_buscarLayout);
         jd_buscarLayout.setHorizontalGroup(
@@ -194,14 +201,20 @@ public class Inicio extends javax.swing.JFrame {
                     .addGroup(jd_buscarLayout.createSequentialGroup()
                         .addGroup(jd_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jd_buscarLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jtxt_codigo_insert_Buscar))
-                            .addGroup(jd_buscarLayout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jcmb_existe_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(44, 44, 44)
+                                .addComponent(jcmb_existe_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jd_buscarLayout.createSequentialGroup()
+                                .addGroup(jd_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel9))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jd_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jd_buscarLayout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jtxt_codigo_insert_Nodo))
+                                    .addComponent(jtxt_codigo_insert_Buscar))))
+                        .addGap(34, 34, 34)
                         .addGroup(jd_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jbtn_cargar_Buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jbtn_insertar_Buscar, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE))
@@ -223,8 +236,12 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jtxt_codigo_insert_Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbtn_insertar_Buscar))
-                .addGap(51, 51, 51)
-                .addComponent(jtxt_ruta, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                .addGap(11, 11, 11)
+                .addGroup(jd_buscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jtxt_codigo_insert_Nodo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jtxt_ruta, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -520,6 +537,7 @@ public class Inicio extends javax.swing.JFrame {
         }
         else{
             int cod = Integer.parseInt(jtxt_codigo.getText());
+            admin_b= new Admin_B_Tree(contenido);
             entero = new Entero(cod);
             enteros.add(entero);
             admin_b.insertar(cod);
@@ -613,14 +631,7 @@ public class Inicio extends javax.swing.JFrame {
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrirVerActionPerformed
 
-<<<<<<< HEAD
-//<<<<<<< HEAD
-//<<<<<<< HEAD
-//=======
-//>>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
-=======
 
->>>>>>> 79cf16f457e4a42e6f0163ce1d983762174a1a1c
     private void jbtn_cargar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargar_BuscarActionPerformed
         // TODO add your handling code here:
         try {
@@ -684,14 +695,7 @@ public class Inicio extends javax.swing.JFrame {
         admin = new Admin_Entero(nombreArch);
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrir_EliminarActionPerformed
-<<<<<<< HEAD
-// HEAD
-//=======
-//=======
-//>>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
-=======
 
->>>>>>> 79cf16f457e4a42e6f0163ce1d983762174a1a1c
     private void jbtn_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertarActionPerformed
         // TODO add your handling code here:
         int codigo=0;
@@ -702,16 +706,12 @@ public class Inicio extends javax.swing.JFrame {
         admin_b.insertar(codigo);
         
     }//GEN-LAST:event_jbtn_insertarActionPerformed
-<<<<<<< HEAD
-//<<<<<<< HEAD
-//>>>>>>> 9ac080fcf21873b752205cdee438308d80b6e170
-//=======
-=======
-
->>>>>>> 79cf16f457e4a42e6f0163ce1d983762174a1a1c
 
     private void jbtn_insertar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertar_BuscarActionPerformed
         // TODO add your handling code here:
+        admin_b.buscar(Integer.parseInt(jtxt_codigo_insert_Buscar.getText()), jtxt_codigo_insert_Nodo.getText());
+        jtxt_codigo_insert_Buscar.setText("");
+        jtxt_codigo_insert_Nodo.setText("");
     }//GEN-LAST:event_jbtn_insertar_BuscarActionPerformed
 
     private void jbtn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_eliminarActionPerformed
@@ -720,10 +720,6 @@ public class Inicio extends javax.swing.JFrame {
         jtxt_codigo_insert_Eliminar.setText("");
         JOptionPane.showMessageDialog(this, "Se borro el elemento del arbol");
     }//GEN-LAST:event_jbtn_eliminarActionPerformed
-<<<<<<< HEAD
-//>>>>>>> 8dc173e4f3bdea7ab367a9384ed3760cce260987
-=======
->>>>>>> 79cf16f457e4a42e6f0163ce1d983762174a1a1c
 
     /**
      * @param args the command line arguments
@@ -769,6 +765,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -806,6 +803,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JTextField jtxt_codigo_insert;
     private javax.swing.JTextField jtxt_codigo_insert_Buscar;
     private javax.swing.JTextField jtxt_codigo_insert_Eliminar;
+    private javax.swing.JTextField jtxt_codigo_insert_Nodo;
     private javax.swing.JTextField jtxt_ruta;
     // End of variables declaration//GEN-END:variables
 String nombreArch = "";
