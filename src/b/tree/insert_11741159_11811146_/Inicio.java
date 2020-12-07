@@ -5,6 +5,9 @@
  */
 package b.tree.insert_11741159_11811146_;
 
+import java.io.File;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Tiffanny
@@ -84,8 +87,18 @@ public class Inicio extends javax.swing.JFrame {
         jtxt_codigo.setFont(new java.awt.Font("DengXian", 0, 11)); // NOI18N
 
         jbtn_crear.setText("Crear");
+        jbtn_crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_crearActionPerformed(evt);
+            }
+        });
 
         jbtn_agregar.setText("Agregar");
+        jbtn_agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_agregarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jd_crearLayout = new javax.swing.GroupLayout(jd_crear.getContentPane());
         jd_crear.getContentPane().setLayout(jd_crearLayout);
@@ -96,11 +109,11 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtxt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jbtn_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
                 .addComponent(jbtn_crear, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
+                .addGap(43, 43, 43)
+                .addComponent(jbtn_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         jd_crearLayout.setVerticalGroup(
             jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,8 +122,8 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(jd_crearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jtxt_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbtn_agregar)
-                    .addComponent(jbtn_crear))
+                    .addComponent(jbtn_crear)
+                    .addComponent(jbtn_agregar))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -183,6 +196,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jmi_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_crearActionPerformed
         // TODO add your handling code here:
+        nombreArch = JOptionPane.showInputDialog(null, "Nombre", JOptionPane.QUESTION_MESSAGE);
         jd_crear.setModal(true);
         jd_crear.pack();
         jd_crear.setLocationRelativeTo(this);
@@ -212,6 +226,17 @@ public class Inicio extends javax.swing.JFrame {
         jd_eliminar.setLocationRelativeTo(this);
         jd_eliminar.setVisible(true);
     }//GEN-LAST:event_jmi_borrarActionPerformed
+
+    private void jbtn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_agregarActionPerformed
+        // TODO add your handling code here:
+        int cod = Integer.parseInt(jtxt_codigo.getText());
+        
+    }//GEN-LAST:event_jbtn_agregarActionPerformed
+
+    private void jbtn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_crearActionPerformed
+        // TODO add your handling code here:
+        admin = new Admin_Entero(nombreArch+".rw");
+    }//GEN-LAST:event_jbtn_crearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,4 +291,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_insertar;
     private javax.swing.JTextField jtxt_codigo;
     // End of variables declaration//GEN-END:variables
+String nombreArch = "";
+Admin_Nodo admin;
+String ruta = "./Creados/";
 }
