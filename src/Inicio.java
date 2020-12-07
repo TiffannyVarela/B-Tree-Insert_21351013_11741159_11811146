@@ -172,6 +172,11 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         jbtn_insertar_Buscar.setText("Buscar");
+        jbtn_insertar_Buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_insertar_BuscarActionPerformed(evt);
+            }
+        });
 
         jtxt_codigo_insert_Buscar.setFont(new java.awt.Font("DengXian", 0, 14)); // NOI18N
 
@@ -235,6 +240,11 @@ public class Inicio extends javax.swing.JFrame {
         jtxt_codigo_insert_Eliminar.setFont(new java.awt.Font("DengXian", 0, 14)); // NOI18N
 
         jbtn_eliminar.setText("Eliminar");
+        jbtn_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_eliminarActionPerformed(evt);
+            }
+        });
 
         jbtn_cargar_Eliminar.setText("Cargar");
         jbtn_cargar_Eliminar.addActionListener(new java.awt.event.ActionListener() {
@@ -601,7 +611,6 @@ public class Inicio extends javax.swing.JFrame {
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrirVerActionPerformed
 
-<<<<<<< HEAD
     private void jbtn_cargar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargar_BuscarActionPerformed
         // TODO add your handling code here:
         try {
@@ -665,7 +674,6 @@ public class Inicio extends javax.swing.JFrame {
         admin = new Admin_Entero(nombreArch);
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrir_EliminarActionPerformed
-=======
     private void jbtn_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertarActionPerformed
         // TODO add your handling code here:
         int codigo=0;
@@ -676,7 +684,17 @@ public class Inicio extends javax.swing.JFrame {
         admin_b.insertar(codigo);
         
     }//GEN-LAST:event_jbtn_insertarActionPerformed
->>>>>>> 9ac080fcf21873b752205cdee438308d80b6e170
+
+    private void jbtn_insertar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertar_BuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtn_insertar_BuscarActionPerformed
+
+    private void jbtn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_eliminarActionPerformed
+        // TODO add your handling code here:
+        admin_b.eliminar(Integer.parseInt(""+jtxt_codigo_insert_Eliminar.getText()));
+        jtxt_codigo_insert_Eliminar.setText("");
+        JOptionPane.showMessageDialog(this, "Se borro el elemento del arbol");
+    }//GEN-LAST:event_jbtn_eliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -766,5 +784,5 @@ Admin_Entero admin;
 String ruta = "./Creados/";
 Entero entero;
 ArrayList <Entero> enteros = new ArrayList();
-Admin_B_Tree admin_b=new Admin_B_Tree();
+Admin_B_Tree admin_b;
 }
