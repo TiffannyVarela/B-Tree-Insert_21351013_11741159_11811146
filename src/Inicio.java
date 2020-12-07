@@ -470,6 +470,7 @@ public class Inicio extends javax.swing.JFrame {
     private void jmi_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_crearActionPerformed
         // TODO add your handling code here:
         nombreArch = JOptionPane.showInputDialog(null, "Nombre", JOptionPane.QUESTION_MESSAGE);
+        admin_b=new Admin_B_Tree();
         jd_crear.setModal(true);
         jd_crear.pack();
         jd_crear.setLocationRelativeTo(this);
@@ -511,6 +512,7 @@ public class Inicio extends javax.swing.JFrame {
             int cod = Integer.parseInt(jtxt_codigo.getText());
             entero = new Entero(cod);
             enteros.add(entero);
+            admin_b.insertar(cod);
             jtxt_codigo.setText("");
         }
         
@@ -601,7 +603,7 @@ public class Inicio extends javax.swing.JFrame {
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrirVerActionPerformed
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
     private void jbtn_cargar_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cargar_BuscarActionPerformed
         // TODO add your handling code here:
         try {
@@ -665,7 +667,7 @@ public class Inicio extends javax.swing.JFrame {
         admin = new Admin_Entero(nombreArch);
         admin.Cargar();
     }//GEN-LAST:event_jbtn_abrir_EliminarActionPerformed
-=======
+//=======
     private void jbtn_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertarActionPerformed
         // TODO add your handling code here:
         int codigo=0;
@@ -676,7 +678,7 @@ public class Inicio extends javax.swing.JFrame {
         admin_b.insertar(codigo);
         
     }//GEN-LAST:event_jbtn_insertarActionPerformed
->>>>>>> 9ac080fcf21873b752205cdee438308d80b6e170
+//>>>>>>> 9ac080fcf21873b752205cdee438308d80b6e170
 
     /**
      * @param args the command line arguments
@@ -766,5 +768,5 @@ Admin_Entero admin;
 String ruta = "./Creados/";
 Entero entero;
 ArrayList <Entero> enteros = new ArrayList();
-Admin_B_Tree admin_b=new Admin_B_Tree();
+Admin_B_Tree admin_b;
 }
