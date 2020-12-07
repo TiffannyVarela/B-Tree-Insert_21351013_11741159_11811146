@@ -85,6 +85,11 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         jbtn_insertar.setText("Insertar");
+        jbtn_insertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_insertarActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("DengXian", 1, 14)); // NOI18N
         jLabel3.setText("Codigo");
@@ -433,6 +438,17 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtn_abrirVerActionPerformed
 
+    private void jbtn_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_insertarActionPerformed
+        // TODO add your handling code here:
+        int codigo=0;
+        
+        codigo= Integer.parseInt(""+jtxt_codigo_insert.getText());
+        jtxt_codigo_insert.setText("");
+        
+        admin_b.insertar(codigo);
+        
+    }//GEN-LAST:event_jbtn_insertarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -506,4 +522,5 @@ Admin_Entero admin;
 String ruta = "./Creados/";
 Entero entero;
 ArrayList <Entero> enteros = new ArrayList();
+Admin_B_Tree admin_b=new Admin_B_Tree();
 }
